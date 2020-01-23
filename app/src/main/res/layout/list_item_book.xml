@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/image_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/imagebook" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16_dp"
+        android:layout_marginLeft="@dimen/margin_16_dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            tools:text="Jeet Kune Do" />
+
+        <TextView
+            android:id="@+id/text_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            android:textStyle="normal|italic"
+            tools:text="Bruce Lee" />
+
+        <TextView
+            android:id="@+id/text_published_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:textSize="10sp"
+            tools:text="2011-07-13"
+            tools:ignore="SmallSp" />
+
+        <RatingBar
+            android:id="@+id/rating_bar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="2.5"
+            android:stepSize="0.5" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/text_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/text_amount"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="10sp"
+            tools:ignore="SmallSp"
+            tools:text="EN" />
+
+        <TextView
+            android:id="@+id/text_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="end"
+            android:textColor="@color/colorAccent"
+            android:textSize="10sp"
+            tools:ignore="SmallSp"
+            tools:text="100.0" />
+
+        <TextView
+            android:id="@+id/text_currency_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/text_amount"
+            android:layout_toStartOf="@+id/text_amount"
+            android:layout_toLeftOf="@+id/text_amount"
+            android:paddingEnd="3dp"
+            android:paddingRight="3dp"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="10sp"
+            tools:ignore="RtlSymmetry,SmallSp"
+            tools:text="EGP" />
+    </RelativeLayout>
+
+</LinearLayout>
